@@ -1,4 +1,9 @@
-var addNumn = function (num1, num2) {
-    return num1 + num2;
+var addAndHandle = function (n1, n2, callback) {
+    var result = n1 + n2;
+    var callbackResult = callback(result);
+    console.log(callbackResult);
 };
-console.log(addNumn(1, 2));
+addAndHandle(10, 20, function (result) {
+    var plusOne = result + 1;
+    return plusOne;
+});
